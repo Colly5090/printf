@@ -18,48 +18,51 @@ The standard printf function is used to print formatted text to the standard ou
 
 ## Getting Started
 1. Include the necessary libraries:
-	1.1 #include <stdio.h>
-	1.2 #include <stdarg.h>
-	1.3 #include <stdlib.h>
-	1.4 #include <string.h>
+   c
+   #include <stdio.h>
+   #include <stdarg.h>
+   #include <stdlib.h>
+   #include <string.h>
 
 2. Prototype of the printf:
-	void my_printf(const char *format, ...);
+   c
+   void my_printf(const char *format, ...);
 
 3. Function definition and declarations:
-	void my_printf(const char *format, ...);{
-		va_list args;
-		va_start(args, format); /* Process format specifiers and print the corresponding data. */
-
-		va_copy(va_list dest, va_list src); /* required where necessary */
-		
-		va_end(args); 
-		return (0); /* Return nothing */
-	}
+   c
+   void my_printf(const char *format, ...) {
+       va_list args;
+       va_start(args, format); /* Process format specifiers and print the corresponding data. */
+       va_copy(va_list dest, va_list src); /* required where necessary */ 
+       
+       va_end(args);
+       return (0); /* Return nothing */
+   }
 
 ## Handling Format Specifiers
 Our custom 'printf' function will support the following format specifiers:
-	. % - Denotes a format specifier and any character followed will indicate data type to print.
-	. %s - for printing strings.
-	. %d or %i - for printing integers.
-	. %f - for printing float.
-	. %c - for printing character.
-	. %% - for printing a literal %.
-	. %o - for printing octal number.
-	. %u - for printing unsigned integer.
+
+- `%c`: Print a single character.
+- `%s`: Print a string (a null-terminated character array).
+- `%d` or `%i`: Print a signed integer.
+- `%u`: Print an unsigned integer.
+- `%f`: Print a floating-point number.
+- `%%`: Print a literal percent symbol.
 
 ## Data Types
 The va_arg will be use to extract variable arguments based on the format specifier encountered. For instance %s will be used to extract a string.
-It will be used to also extract integers, strings, floats etc based on their format specifiers.
-	void *str_arg = va_arg(args, void *);
+It will be used to also extract integers, strings, floats etc based on their format specifiers.:
+c
+void *str_arg = va_arg(args, void *);
 
 ## Special Characters
 Special sequences and characters will be handled in the format string as follows:
-	. \\ - for escaping backslash itself as  literal backslash
-	. \" - for escaping and printing double quote
-	. \n - for escaping and printing a newline character
-	. \t - for escasping and printing a tab
-	. \' - for printing a single quote
+
+- `\\` - for escaping backslash itself as  literal backslash
+- ` \"` - for escaping and printing double quote
+- ` \n` - for escaping and printing a newline character
+- ` \t` - for escasping and printing a tab
+- ` \'` - for printing a single quote
 
 ## Memory Management
 Since the printf function supports a string,we will need to ensure proper memory management to avoid memory leaks. You may use malloc to allocate memory for strings and free to release the memory once it's no longer needed.
@@ -71,20 +74,3 @@ Consider handling error cases, such as NULL string arguments, memory allocation 
 Creating your own printf function is a challenging task that requires careful handling of format specifiers, various data types, special characters, memory management, and error cases. This guide provides a basic outline to get you started, but remember that a complete and production-ready implementation may require additional complexity and consideration for edge cases.
 
 Happy coding and have fun building your custom printf function 😊😊😁😁😌😌!!!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
