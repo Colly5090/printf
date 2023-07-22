@@ -18,26 +18,28 @@ The standard printf function is used to print formatted text to the standard ou
 
 ## Getting Started
 1. Include the necessary libraries:
-   c
-   #include <stdio.h>
-   #include <stdarg.h>
-   #include <stdlib.h>
-   #include <string.h>
+
+ 
+- #include <stdio.h>
+- #include <stdarg.h>
+- #include <stdlib.h>
+- #include <string.h>
 
 2. Prototype of the printf:
-   c
-   void my_printf(const char *format, ...);
+  
+-  void my_printf(const char *format, ...);
 
 3. Function definition and declarations:
-   c
-   void my_printf(const char *format, ...) {
-       va_list args;
-       va_start(args, format); /* Process format specifiers and print the corresponding data. */
-       va_copy(va_list dest, va_list src); /* required where necessary */ 
+
+void my_printf(const char *format, ...) 
+{
+	va_list args;
+	va_start(args, format); /* Process format specifiers and print the corresponding data. */
+	va_copy(va_list dest, va_list src); /* required where necessary */ 
        
-       va_end(args);
-       return (0); /* Return nothing */
-   }
+	va_end(args);
+	return (0); /* Return nothing */
+}
 
 ## Handling Format Specifiers
 Our custom 'printf' function will support the following format specifiers:
@@ -52,8 +54,8 @@ Our custom 'printf' function will support the following format specifiers:
 ## Data Types
 The va_arg will be use to extract variable arguments based on the format specifier encountered. For instance %s will be used to extract a string.
 It will be used to also extract integers, strings, floats etc based on their format specifiers.:
-c
-void *str_arg = va_arg(args, void *);
+
+- void *str_arg = va_arg(args, void *);
 
 ## Special Characters
 Special sequences and characters will be handled in the format string as follows:
