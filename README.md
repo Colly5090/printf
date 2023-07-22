@@ -18,7 +18,6 @@ The standard printf function is used to print formatted text to the standard ou
 
 ## Getting Started
 1. Include the necessary libraries:
-
  
 - #include <stdio.h>
 - #include <stdarg.h>
