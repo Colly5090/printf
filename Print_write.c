@@ -6,11 +6,12 @@
  * @c: to check character types.
  * @buffer: array of buffer to handle print
  * @flags:  to check for active flags.
- * @width: get width.
+ * @width: to get width.
  * @precision: to handle precision specifier
  * @size: to handle size specifier
  * Return: characters printed
  */
+
 int handlewrite_char(char c, char buffer[],
 		int flags, int width, int precision, int size)
 {
