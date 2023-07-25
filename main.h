@@ -30,7 +30,9 @@ struct format
 typedef struct format fmt_t;
 
 int handle_print(const char *fmt, int *x,
-		va_list datatype, char buffer[], int flags, int width, int precision, int size);
+	va_list datatype, char buffer[],
+	int flags, int width, int precision,
+	int size);
 
 #define FMINUS 1
 #define FPLUS 2
