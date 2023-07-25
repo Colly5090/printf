@@ -27,7 +27,7 @@ int _get_flags(const char *format, int *x)
 			break;
 	}
 
-	*x = y - 1
+	*x = y - 1;
 
 	return (flags);
 }
