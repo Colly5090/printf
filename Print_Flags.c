@@ -7,7 +7,7 @@
  * Return: flags
  */
 
-int _get_flags(constzzq char *format, int *x)
+int _get_flags(const char *format, int *x)
 {
 	int i, y;
 	int flags = 0;
