@@ -75,3 +75,5 @@ Consider handling error cases, such as NULL string arguments, memory allocation 
 Creating your own printf function is a challenging task that requires careful handling of format specifiers, various data types, special characters, memory management, and error cases. This guide provides a basic outline to get you started, but remember that a complete and production-ready implementation may require additional complexity and consideration for edge cases.
 
 Happy coding and have fun building your custom printf function 😊😊😁😁😌😌!!!
+
+Group Project.
